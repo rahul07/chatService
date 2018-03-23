@@ -1,0 +1,11 @@
+com/rrahul/uacf/rest/healthcheck/AppHealthCheck.class
+com/rrahul/uacf/rest/api/model/GetIdResponse.class
+com/rrahul/uacf/rest/api/model/PostRequest.class
+com/rrahul/uacf/rest/api/User.class
+com/rrahul/uacf/rest/web/resource/ChatResource.class
+com/rrahul/uacf/rest/api/UserDetails.class
+com/rrahul/uacf/rest/api/model/GetUserNameResponse.class
+com/rrahul/uacf/rest/web/ChatApp.class
+com/rrahul/uacf/rest/api/model/PostResponse.class
+com/rrahul/uacf/rest/dao/UserDB.class
+com/rrahul/uacf/rest/healthcheck/HealthCheckController.class

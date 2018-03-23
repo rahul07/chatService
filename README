@@ -1,0 +1,36 @@
+To build:
+
+mvn clean install
+
+To run:
+java -jar target/ChatService-0.0.1-SNAPSHOT.jar server
+
+You have 2 ways to run the client:
+    on another terminal, you can give POST and GET commands, e.g.:
+        curl -H "Content-Type: application/json" -X POST -d '{"userName":"xyz","msgText":"abc"}' http://localhost:8080/chat
+        curl -H "Content-Type: application/json" -X GET -d '' http://localhost:8080/chats/xyz
+
+    or use POSTMAN with header as : "content-type": "application/json" and the body as per the option you are selecting
+
+
+
+PS:
+NOTE: this code is not production worthy yet.
+i didnt have time to configure a db. Also, i accidently did a rm -rf on my test file. I just added a POST test so that you can see what i was
+trying.
+
+
+Answers to the follow up questions:
+1. i would probably use a noSQL db like cassandra and deploy on the cloud (e.g. AWS)
+
+2. Questions to ask PO:
+    a. is this only US based on international? if so, we would need to deploy it in multiple regions
+    b. do we only want to support english or other languages
+    c. what should be the SLA time - depending on this, we might need to use a caching mechanism (e.g. redis)
+
+3. NoSQL DB, Dropwizard framework for the java app. Deploy to cloud using docker
+4. As i mentioned, i didnt have time to configure a DB. i would use cassandra for that.
+5. Add logging and setup dashboards to monitor when an instance on which the app is deployed goes down or sees unusual traffic.
+    To protect, have users authenticate before they are allowed to post/get. Also might consider giving users certain access levels - e.g.
+    a person should only be able to GET the msgs for himself/ herself.
+    only an admin should be able to get msgs about all users.

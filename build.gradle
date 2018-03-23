@@ -1,0 +1,17 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.rrahul.uacf', name: 'dropwizard-core', version: '1.0.0'
+}
+
+apply plugin: 'application'
+
+mainClassName = 'com.rrahul.uacf.rest.App'
+
+run {
+    args 'server'
+}
